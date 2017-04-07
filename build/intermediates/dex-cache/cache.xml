@@ -3,12 +3,12 @@
 
     <item
         is-multidex="true"
-        jar="/Users/toby/AndroidStudioProjects/BaiMap/app/libs/BaiduLBS_Android.jar"
+        jar="/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="595c3fca63e0e1f46752c294445310ee570ceb53">
-        <dex dex="/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/transforms/dex/debug/folders/1000/2/BaiduLBS_Android_47a30a15aff3c7be525802fb3e63cb2b707b3dac/classes.dex" />
+        sha1="2ee21aa0ce8c883f738b4aa95bbcaee3a7f87bcd">
+        <dex dex="/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_53e8566c1a98361efd251f5f38666da57fec084d/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -21,12 +21,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jar="/Users/toby/AndroidStudioProjects/BaiMap/app/libs/BaiduLBS_Android.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="e538eaa13ce195713f28872ce41505f0ce9cee38">
-        <dex dex="/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_53e8566c1a98361efd251f5f38666da57fec084d/classes.dex" />
+        sha1="595c3fca63e0e1f46752c294445310ee570ceb53">
+        <dex dex="/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/transforms/dex/debug/folders/1000/2/BaiduLBS_Android_47a30a15aff3c7be525802fb3e63cb2b707b3dac/classes.dex" />
     </item>
 
 </items>

@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri Apr 07 08:43:29 CST 2017
+#Fri Apr 07 11:37:04 CST 2017
 210.set=ANDROID_RESOURCE
 282.file=/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/resources-debug.ap_/res/drawable/abc_seekbar_track_material.xml
 14.set=JAVA_RESOURCE

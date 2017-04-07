@@ -1,5 +1,6 @@
 package com.example.toby.baimap;
 
+import android.location.Location;
 import android.location.LocationListener;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -35,8 +36,12 @@ import static com.example.toby.baimap.R.id.location;
 public class MainActivity extends AppCompatActivity {
     MapView mMapView =null;
     BaiduMap mBaiduMap = null;
-    //定位
 
+    //定位
+    private MyLocationListener mLocationListener;
+    private LocationClient mLocationClient;
+    private boolean isFirstIn=true;
+    MapStatusUpdate msu;
     //定义经纬度
 
     @Override
@@ -48,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         initMap();
         definePoint();
         //定位
+        initLocation();
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -62,6 +68,29 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private void initLocation()
+    {
+        mLocationClient=new LocationClient(this);
+        mLocationListener  = new MyLocationListener();
+        mLocationClient.registerLocationListener(mLocationListener);
+
+
+        LocationClientOption option = new LocationClientOption();
+        option.setCoorType("bd09ll");
+        option.setIsNeedAddress(true);
+        option.setOpenGps(true);
+        option.setScanSpan(1000);
+        mLocationClient.setLocOption(option);
+
+        LatLng point2 = new LatLng(39.97681, 116.426876);
+        BitmapDescriptor bitloc=BitmapDescriptorFactory.fromResource(R.drawable.icon_st);
+        OverlayOptions option2 = new MarkerOptions().position(point2).icon(bitloc);
+        mBaiduMap.addOverlay(option2);
+
+
+
+    }
+
 
     //函数管理
     private void initMap(){
@@ -70,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
         //普通地图
         mBaiduMap.setMapType(BaiduMap.MAP_TYPE_NORMAL);
         //定义层级
-        MapStatusUpdate msu = MapStatusUpdateFactory.zoomTo(16.0f);
+        msu = MapStatusUpdateFactory.zoomTo(16.0f);
         mBaiduMap.setMapStatus(msu);
     }
     private void definePoint(){
@@ -79,13 +108,52 @@ public class MainActivity extends AppCompatActivity {
 //构建Marker图标
         BitmapDescriptor bitmap = BitmapDescriptorFactory
                 .fromResource(R.drawable.icon_gcoding);
+        BitmapDescriptor bitloc=BitmapDescriptorFactory.fromResource(R.drawable.arrow);
 //构建MarkerOption，用于在地图上添加Marker
         OverlayOptions option = new MarkerOptions().position(point).icon(bitmap);
 //在地图上添加Marker，并显示
         mBaiduMap.addOverlay(option);
+        //第二个点，临时代码
+        LatLng point1 = new LatLng(39.969922, 116.424606);
+//构建Marker图标
+        BitmapDescriptor bitmap1 = BitmapDescriptorFactory
+                .fromResource(R.drawable.icon_gcoding);
+//构建MarkerOption，用于在地图上添加Marker
+        OverlayOptions option1 = new MarkerOptions().position(point1).icon(bitmap1);
+//在地图上添加Marker，并显示
+        mBaiduMap.addOverlay(option1);
     }
 
-    //生命周期管理
+    //我的位置的监听
+    private class MyLocationListener implements BDLocationListener{
+
+        @Override
+        public void onReceiveLocation(BDLocation location) {
+            MyLocationData data = new MyLocationData.Builder()
+                    .accuracy(location.getRadius())
+                    .latitude(location.getLatitude())
+                    .longitude(location.getLongitude()).build();
+            mBaiduMap.setMyLocationData(data);
+
+            if(isFirstIn) {
+                LatLng latlng = new LatLng(39.97681, 116.426876);//经纬度
+                msu = MapStatusUpdateFactory.newLatLng(latlng);
+                mBaiduMap.animateMapStatus(msu);
+                isFirstIn = false;
+            }
+        }
+
+        @Override
+        public void onConnectHotSpotMessage(String s, int i) {
+
+        }
+    }
+
+
+
+
+
+    //生命周期管理及菜单管理
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -103,6 +171,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart(){
         super.onStart();
         mBaiduMap.setMyLocationEnabled(true);
+        if (!mLocationClient.isStarted())
+            mLocationClient.start();
 
     }
 
@@ -117,6 +187,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onStop()
     {
         super.onStop();
+        //停止定位
+        mBaiduMap.setMyLocationEnabled(false);
+        mLocationClient.stop();
 
     }
     @Override
@@ -143,3 +216,4 @@ public class MainActivity extends AppCompatActivity {
 
 
 }
+
