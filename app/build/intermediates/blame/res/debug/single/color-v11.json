@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/Users/toby/.android/build-cache/0e474de9d50cbe165ccfec1269c296a7881a1e70/output/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/Users/toby/.android/build-cache/0e474de9d50cbe165ccfec1269c296a7881a1e70/output/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+    }
+]

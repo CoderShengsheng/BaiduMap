@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_narrow_custom.xml",
+        "source": "/Users/toby/.android/build-cache/0e474de9d50cbe165ccfec1269c296a7881a1e70/output/res/layout-v11/notification_template_big_media_narrow_custom.xml"
+    },
+    {
+        "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/layout-v11/notification_media_action.xml",
+        "source": "/Users/toby/.android/build-cache/0e474de9d50cbe165ccfec1269c296a7881a1e70/output/res/layout-v11/notification_media_action.xml"
+    },
+    {
+        "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_custom.xml",
+        "source": "/Users/toby/.android/build-cache/0e474de9d50cbe165ccfec1269c296a7881a1e70/output/res/layout-v11/notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_narrow.xml",
+        "source": "/Users/toby/.android/build-cache/0e474de9d50cbe165ccfec1269c296a7881a1e70/output/res/layout-v11/notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/layout-v11/notification_media_cancel_action.xml",
+        "source": "/Users/toby/.android/build-cache/0e474de9d50cbe165ccfec1269c296a7881a1e70/output/res/layout-v11/notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media.xml",
+        "source": "/Users/toby/.android/build-cache/0e474de9d50cbe165ccfec1269c296a7881a1e70/output/res/layout-v11/notification_template_big_media.xml"
+    }
+]
