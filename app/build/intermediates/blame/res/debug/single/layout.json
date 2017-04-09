@@ -68,6 +68,10 @@
         "source": "/Users/toby/.android/build-cache/0e474de9d50cbe165ccfec1269c296a7881a1e70/output/res/layout/abc_action_menu_layout.xml"
     },
     {
+        "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/layout/marker_inf.xml",
+        "source": "/Users/toby/AndroidStudioProjects/BaiMap/app/src/main/res/layout/marker_inf.xml"
+    },
+    {
         "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
         "source": "/Users/toby/.android/build-cache/0e474de9d50cbe165ccfec1269c296a7881a1e70/output/res/layout/abc_search_dropdown_item_icons_2line.xml"
     },

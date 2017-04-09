@@ -12,6 +12,10 @@
         "source": "/Users/toby/.android/build-cache/0e474de9d50cbe165ccfec1269c296a7881a1e70/output/res/drawable/abc_btn_default_mtrl_shape.xml"
     },
     {
+        "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/drawable/login_1.jpg",
+        "source": "/Users/toby/AndroidStudioProjects/BaiMap/app/src/main/res/drawable/login_1.jpg"
+    },
+    {
         "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_top_material.xml",
         "source": "/Users/toby/.android/build-cache/0e474de9d50cbe165ccfec1269c296a7881a1e70/output/res/drawable/abc_cab_background_top_material.xml"
     },
@@ -32,8 +36,16 @@
         "source": "/Users/toby/.android/build-cache/0e474de9d50cbe165ccfec1269c296a7881a1e70/output/res/drawable/abc_ratingbar_indicator_material.xml"
     },
     {
+        "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/drawable/back.png",
+        "source": "/Users/toby/AndroidStudioProjects/BaiMap/app/src/main/res/drawable/back.png"
+    },
+    {
         "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml",
         "source": "/Users/toby/.android/build-cache/0e474de9d50cbe165ccfec1269c296a7881a1e70/output/res/drawable/abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/drawable/login_3.jpg",
+        "source": "/Users/toby/AndroidStudioProjects/BaiMap/app/src/main/res/drawable/login_3.jpg"
     },
     {
         "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/drawable/arrow.png",
@@ -74,6 +86,10 @@
     {
         "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_light.xml",
         "source": "/Users/toby/.android/build-cache/0e474de9d50cbe165ccfec1269c296a7881a1e70/output/res/drawable/abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/drawable/car2.jpg",
+        "source": "/Users/toby/AndroidStudioProjects/BaiMap/app/src/main/res/drawable/car2.jpg"
     },
     {
         "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_thumb_material.xml",
@@ -140,6 +156,10 @@
         "source": "/Users/toby/.android/build-cache/0e474de9d50cbe165ccfec1269c296a7881a1e70/output/res/drawable/abc_ratingbar_material.xml"
     },
     {
+        "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/drawable/car3.jpg",
+        "source": "/Users/toby/AndroidStudioProjects/BaiMap/app/src/main/res/drawable/car3.jpg"
+    },
+    {
         "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/drawable/design_password_eye.xml",
         "source": "/Users/toby/.android/build-cache/e9c188727467a3fcce58c03ecca449862b0314af/output/res/drawable/design_password_eye.xml"
     },
@@ -164,6 +184,10 @@
         "source": "/Users/toby/.android/build-cache/0e474de9d50cbe165ccfec1269c296a7881a1e70/output/res/drawable/abc_tab_indicator_material.xml"
     },
     {
+        "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/drawable/car4.jpg",
+        "source": "/Users/toby/AndroidStudioProjects/BaiMap/app/src/main/res/drawable/car4.jpg"
+    },
+    {
         "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml",
         "source": "/Users/toby/.android/build-cache/0e474de9d50cbe165ccfec1269c296a7881a1e70/output/res/drawable/abc_item_background_holo_dark.xml"
     },
@@ -182,6 +206,22 @@
     {
         "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/drawable/abc_btn_borderless_material.xml",
         "source": "/Users/toby/.android/build-cache/0e474de9d50cbe165ccfec1269c296a7881a1e70/output/res/drawable/abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/drawable/car1.jpg",
+        "source": "/Users/toby/AndroidStudioProjects/BaiMap/app/src/main/res/drawable/car1.jpg"
+    },
+    {
+        "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/drawable/pic_iron.jpg",
+        "source": "/Users/toby/AndroidStudioProjects/BaiMap/app/src/main/res/drawable/pic_iron.jpg"
+    },
+    {
+        "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/drawable/login_2.jpg",
+        "source": "/Users/toby/AndroidStudioProjects/BaiMap/app/src/main/res/drawable/login_2.jpg"
+    },
+    {
+        "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/drawable/map.png",
+        "source": "/Users/toby/AndroidStudioProjects/BaiMap/app/src/main/res/drawable/map.png"
     },
     {
         "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/drawable/abc_ic_arrow_drop_right_black_24dp.xml",

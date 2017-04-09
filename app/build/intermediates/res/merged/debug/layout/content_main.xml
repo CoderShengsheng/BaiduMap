@@ -7,10 +7,87 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.toby.baimap.MainActivity"
     tools:showIn="@layout/activity_main">
+
     <com.baidu.mapapi.map.MapView
         android:id="@+id/bmapView"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:clickable="true" />
 
+    <RelativeLayout
+        android:id="@+id/id_maker_ly"
+        android:layout_width="fill_parent"
+        android:layout_height="170dp"
+        android:layout_alignParentBottom="true"
+        android:background="#cc4e5a6b"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/id_info_img"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/car1" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/back">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/id_info_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="老米家泡馍"
+                    android:textColor="#fff5eb" />
+
+                <TextView
+                    android:id="@+id/id_info_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="距离200米"
+                    android:textColor="#fff5eb" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/icon_en"
+                    android:clickable="true" />
+
+                <TextView
+                    android:id="@+id/id_info_zan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="789"
+                    android:textColor="#fff5eb" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
 </android.support.constraint.ConstraintLayout>
+

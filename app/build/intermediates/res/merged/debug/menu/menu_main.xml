@@ -8,8 +8,14 @@
         android:title="@string/action_settings"
         app:showAsAction="never" />
     <item
-        android:id="@+id/location"
+        android:id="@+id/map_location"
         android:orderInCategory="100"
-        android:title="定位"
+        android:title="我的位置"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/map_market"
+        android:orderInCategory="100"
+        android:title="添加覆盖"
+        app:showAsAction="never" />
+
 </menu>

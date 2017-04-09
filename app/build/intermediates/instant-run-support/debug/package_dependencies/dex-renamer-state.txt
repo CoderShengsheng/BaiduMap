@@ -1,4 +1,4 @@
-#Fri Apr 07 11:24:53 CST 2017
+#Fri Apr 07 21:19:19 CST 2017
 file.2=/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d2ccf4ca302169b0836e19891f5d165cb7ff9b41/classes.dex
 base.2=/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d2ccf4ca302169b0836e19891f5d165cb7ff9b41
 file.1=/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e187bdc18bd65e5ffc927bc6d80b6f1e846e0548/classes.dex

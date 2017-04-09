@@ -1,5 +1,8 @@
 package com.example.toby.baimap;
 
+import android.content.Context;
+import android.graphics.Color;
+import android.graphics.Point;
 import android.location.Location;
 import android.location.LocationListener;
 import android.os.Bundle;
@@ -7,10 +10,16 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.ContextThemeWrapper;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
@@ -21,6 +30,8 @@ import com.baidu.mapapi.SDKInitializer;
 import com.baidu.mapapi.map.BaiduMap;
 import com.baidu.mapapi.map.BitmapDescriptor;
 import com.baidu.mapapi.map.BitmapDescriptorFactory;
+import com.baidu.mapapi.map.InfoWindow;
+import com.baidu.mapapi.map.MapPoi;
 import com.baidu.mapapi.map.MapStatusUpdate;
 import com.baidu.mapapi.map.MapStatusUpdateFactory;
 import com.baidu.mapapi.map.MapView;
@@ -31,7 +42,10 @@ import com.baidu.mapapi.map.MyLocationData;
 import com.baidu.mapapi.map.OverlayOptions;
 import com.baidu.mapapi.model.LatLng;
 
-import static com.example.toby.baimap.R.id.location;
+import java.io.Serializable;
+import java.util.List;
+
+//import static com.example.toby.baimap.R.id.location;
 
 public class MainActivity extends AppCompatActivity {
     MapView mMapView =null;
@@ -41,8 +55,21 @@ public class MainActivity extends AppCompatActivity {
     private MyLocationListener mLocationListener;
     private LocationClient mLocationClient;
     private boolean isFirstIn=true;
+
+    private Context context;
     MapStatusUpdate msu;
-    //定义经纬度
+    //经纬度
+    public  double mLatitude;
+    public  double mLongtitude;
+    //方向传感器
+    //private BitmapDescriptor mIconLocation;
+    //private MyOrientationListener myOrientationListener;
+    //private float mCurrentX;
+   // private MyLocationConfiguration.LocationMode mLocationMode;
+    //添加覆盖物
+    private BitmapDescriptor mMarker;
+    private RelativeLayout mMarkerLy;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,10 +77,79 @@ public class MainActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         SDKInitializer.initialize(getApplicationContext());
         setContentView(R.layout.activity_main);
+        this.context=this;
         initMap();
-        definePoint();
+        //definePoint();
         //定位
         initLocation();
+
+        initMarker();
+        //添加覆盖
+        addOverlays(Info.infos);
+
+        mBaiduMap.setOnMarkerClickListener(new BaiduMap.OnMarkerClickListener()
+        {
+            @Override
+            public boolean onMarkerClick(Marker marker)
+            {
+                Bundle extraInfo = marker.getExtraInfo();
+                Info info = (Info) extraInfo.getSerializable("info");
+                ImageView iv = (ImageView) mMarkerLy
+                        .findViewById(R.id.id_info_img);
+                TextView distance = (TextView) mMarkerLy
+                        .findViewById(R.id.id_info_distance);
+                TextView name = (TextView) mMarkerLy
+                        .findViewById(R.id.id_info_name);
+                TextView zan = (TextView) mMarkerLy
+                        .findViewById(R.id.id_info_zan);
+                iv.setImageResource(info.getImgId());
+                distance.setText(info.getDistance());
+                name.setText(info.getName());
+                zan.setText(info.getZan() + "");
+/*
+                InfoWindow infoWindow;
+                TextView tv = new TextView(context);
+                tv.setBackgroundResource(R.drawable.back);
+                tv.setPadding(30, 20, 30, 50);
+                tv.setText(info.getName());
+                tv.setTextColor(Color.parseColor("#ffffff"));
+
+                final LatLng latLng = marker.getPosition();
+                Point p = mBaiduMap.getProjection().toScreenLocation(latLng);
+                p.y -= 47;
+                LatLng ll = mBaiduMap.getProjection().fromScreenLocation(p);
+
+                infoWindow = new InfoWindow(tv, ll,
+                        new InfoWindow.OnInfoWindowClickListener()
+                        {
+                            @Override
+                            public void onInfoWindowClick()
+                            {
+                                mBaiduMap.hideInfoWindow();
+                            }
+                        });
+                mBaiduMap.showInfoWindow(infoWindow);*/
+                mMarkerLy.setVisibility(View.VISIBLE);
+
+                return true;
+            }
+        });
+        mBaiduMap.setOnMapClickListener(new BaiduMap.OnMapClickListener()
+        {
+
+            @Override
+            public boolean onMapPoiClick(MapPoi arg0)
+            {
+                return false;
+            }
+
+            @Override
+            public void onMapClick(LatLng arg0)
+            {
+                mMarkerLy.setVisibility(View.GONE);
+                mBaiduMap.hideInfoWindow();
+            }
+        });
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -68,8 +164,15 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
+    private void initMarker() {
+        mMarker = BitmapDescriptorFactory.fromResource(R.drawable.icon_gcoding);
+        mMarkerLy = (RelativeLayout) findViewById(R.id.id_maker_ly);
+    }
+
     private void initLocation()
     {
+       // mLocationMode = MyLocationConfiguration.LocationMode.NORMAL;
         mLocationClient=new LocationClient(this);
         mLocationListener  = new MyLocationListener();
         mLocationClient.registerLocationListener(mLocationListener);
@@ -81,18 +184,34 @@ public class MainActivity extends AppCompatActivity {
         option.setOpenGps(true);
         option.setScanSpan(1000);
         mLocationClient.setLocOption(option);
-
-        LatLng point2 = new LatLng(39.97681, 116.426876);
-        BitmapDescriptor bitloc=BitmapDescriptorFactory.fromResource(R.drawable.icon_st);
+//初始化图标
+        //mIconLocation = BitmapDescriptorFactory.fromResource(R.drawable.arrow);
+        //myOrientationListener = new MyOrientationListener(context);
+/*
+        myOrientationListener
+                .setOnOrientationListener(new MyOrientationListener.OnOrientationListener()
+                {
+                    @Override
+                    public void onOrientationChanged(float x)
+                    {
+                        mCurrentX = x;
+                    }
+                });
+                */
+//设置定位点
+        LatLng point2 = new LatLng(39.98181,116.426876);
+        BitmapDescriptor bitloc=BitmapDescriptorFactory.fromResource(R.drawable.arrow);
         OverlayOptions option2 = new MarkerOptions().position(point2).icon(bitloc);
         mBaiduMap.addOverlay(option2);
+//添加标记
 
 
 
     }
 
 
-    //函数管理
+
+
     private void initMap(){
         mMapView= (MapView) findViewById(R.id.bmapView);
         mBaiduMap = mMapView.getMap();
@@ -102,27 +221,6 @@ public class MainActivity extends AppCompatActivity {
         msu = MapStatusUpdateFactory.zoomTo(16.0f);
         mBaiduMap.setMapStatus(msu);
     }
-    private void definePoint(){
-        //定义Maker坐标点
-        LatLng point = new LatLng(39.97581, 116.427876);
-//构建Marker图标
-        BitmapDescriptor bitmap = BitmapDescriptorFactory
-                .fromResource(R.drawable.icon_gcoding);
-        BitmapDescriptor bitloc=BitmapDescriptorFactory.fromResource(R.drawable.arrow);
-//构建MarkerOption，用于在地图上添加Marker
-        OverlayOptions option = new MarkerOptions().position(point).icon(bitmap);
-//在地图上添加Marker，并显示
-        mBaiduMap.addOverlay(option);
-        //第二个点，临时代码
-        LatLng point1 = new LatLng(39.969922, 116.424606);
-//构建Marker图标
-        BitmapDescriptor bitmap1 = BitmapDescriptorFactory
-                .fromResource(R.drawable.icon_gcoding);
-//构建MarkerOption，用于在地图上添加Marker
-        OverlayOptions option1 = new MarkerOptions().position(point1).icon(bitmap1);
-//在地图上添加Marker，并显示
-        mBaiduMap.addOverlay(option1);
-    }
 
     //我的位置的监听
     private class MyLocationListener implements BDLocationListener{
@@ -130,16 +228,26 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onReceiveLocation(BDLocation location) {
             MyLocationData data = new MyLocationData.Builder()
+                    //.direction(mCurrentX)//
                     .accuracy(location.getRadius())
                     .latitude(location.getLatitude())
                     .longitude(location.getLongitude()).build();
             mBaiduMap.setMyLocationData(data);
 
+           //设置图标，经纬
+           // MyLocationConfiguration config = new MyLocationConfiguration(mLocationMode, true, mIconLocation );
+            //mBaiduMap.setMyLocationConfiguration(config);
+
+            mLatitude=39.98181;//location.getLatitude();
+            mLongtitude=116.426876;//location.getLongitude();
             if(isFirstIn) {
-                LatLng latlng = new LatLng(39.97681, 116.426876);//经纬度
+                LatLng latlng = new LatLng(mLatitude, mLongtitude);//经纬度
                 msu = MapStatusUpdateFactory.newLatLng(latlng);
                 mBaiduMap.animateMapStatus(msu);
                 isFirstIn = false;
+                Toast.makeText(context,"我的位置",
+                        //location.getAddrStr(),
+                        Toast.LENGTH_SHORT).show();
             }
         }
 
@@ -150,6 +258,35 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    private void centerToMyLocation() {
+        LatLng latLng = new LatLng(mLatitude,mLongtitude);
+        MapStatusUpdate msu = MapStatusUpdateFactory.newLatLng(latLng);
+        mBaiduMap.animateMapStatus(msu);
+    }
+    //添加覆盖物
+    private void addOverlays(List<Info> infos)
+    {
+        //mBaiduMap.clear();
+        LatLng latLng = null;
+        Marker marker;
+        OverlayOptions options;
+        for (Info info : infos)
+        {
+            // æ≠Œ≥∂»
+            latLng = new LatLng(info.getLatitude(), info.getLongitude());
+            // Õº±Í
+            options = new MarkerOptions().position(latLng).icon(mMarker)
+                    .zIndex(5);
+            marker = (Marker) mBaiduMap.addOverlay(options);
+            Bundle arg0 = new Bundle();
+            arg0.putSerializable("info", info);
+            marker.setExtraInfo(arg0);
+        }
+
+        MapStatusUpdate msu = MapStatusUpdateFactory.newLatLng(latLng);
+        mBaiduMap.setMapStatus(msu);
+
+    }
 
 
 
@@ -173,7 +310,8 @@ public class MainActivity extends AppCompatActivity {
         mBaiduMap.setMyLocationEnabled(true);
         if (!mLocationClient.isStarted())
             mLocationClient.start();
-
+        //方向传感器
+        //myOrientationListener.start();
     }
 
     @Override
@@ -190,6 +328,8 @@ public class MainActivity extends AppCompatActivity {
         //停止定位
         mBaiduMap.setMyLocationEnabled(false);
         mLocationClient.stop();
+        //关闭方向传感器
+        //myOrientationListener.stop();
 
     }
     @Override
@@ -210,9 +350,20 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             return true;
         }
+        switch (id){
+            case R.id.map_location:
+                centerToMyLocation();
+                break;
+            case R.id.map_market:
+                addOverlays(Info.infos);
+                break;
+
+        }
 
         return super.onOptionsItemSelected(item);
     }
+
+
 
 
 }
