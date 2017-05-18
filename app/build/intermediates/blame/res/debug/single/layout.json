@@ -1,19 +1,19 @@
 [
     {
-        "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_icon.xml",
-        "source": "/Users/toby/.android/build-cache/0e474de9d50cbe165ccfec1269c296a7881a1e70/output/res/layout/abc_list_menu_item_icon.xml"
-    },
-    {
         "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/layout/design_text_input_password_icon.xml",
         "source": "/Users/toby/.android/build-cache/e9c188727467a3fcce58c03ecca449862b0314af/output/res/layout/design_text_input_password_icon.xml"
     },
     {
-        "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",
-        "source": "/Users/toby/.android/build-cache/0e474de9d50cbe165ccfec1269c296a7881a1e70/output/res/layout/select_dialog_multichoice_material.xml"
+        "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_icon.xml",
+        "source": "/Users/toby/.android/build-cache/0e474de9d50cbe165ccfec1269c296a7881a1e70/output/res/layout/abc_list_menu_item_icon.xml"
     },
     {
         "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/layout/design_menu_item_action_area.xml",
         "source": "/Users/toby/.android/build-cache/e9c188727467a3fcce58c03ecca449862b0314af/output/res/layout/design_menu_item_action_area.xml"
+    },
+    {
+        "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",
+        "source": "/Users/toby/.android/build-cache/0e474de9d50cbe165ccfec1269c296a7881a1e70/output/res/layout/select_dialog_multichoice_material.xml"
     },
     {
         "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",
@@ -40,12 +40,24 @@
         "source": "/Users/toby/.android/build-cache/0e474de9d50cbe165ccfec1269c296a7881a1e70/output/res/layout/abc_search_view.xml"
     },
     {
+        "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/layout/activity_commit.xml",
+        "source": "/Users/toby/AndroidStudioProjects/BaiMap/app/src/main/res/layout/activity_commit.xml"
+    },
+    {
         "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
         "source": "/Users/toby/.android/build-cache/0e474de9d50cbe165ccfec1269c296a7881a1e70/output/res/layout/notification_template_part_chronometer.xml"
     },
     {
+        "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/layout/activity_login.xml",
+        "source": "/Users/toby/AndroidStudioProjects/BaiMap/app/src/main/res/layout/activity_login.xml"
+    },
+    {
         "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/layout/design_layout_tab_text.xml",
         "source": "/Users/toby/.android/build-cache/e9c188727467a3fcce58c03ecca449862b0314af/output/res/layout/design_layout_tab_text.xml"
+    },
+    {
+        "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/layout/activity_register.xml",
+        "source": "/Users/toby/AndroidStudioProjects/BaiMap/app/src/main/res/layout/activity_register.xml"
     },
     {
         "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
@@ -112,6 +124,10 @@
         "source": "/Users/toby/.android/build-cache/0e474de9d50cbe165ccfec1269c296a7881a1e70/output/res/layout/abc_list_menu_item_layout.xml"
     },
     {
+        "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/layout/activity_parking_state.xml",
+        "source": "/Users/toby/AndroidStudioProjects/BaiMap/app/src/main/res/layout/activity_parking_state.xml"
+    },
+    {
         "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/layout/abc_dialog_title_material.xml",
         "source": "/Users/toby/.android/build-cache/0e474de9d50cbe165ccfec1269c296a7881a1e70/output/res/layout/abc_dialog_title_material.xml"
     },
@@ -148,6 +164,10 @@
         "source": "/Users/toby/.android/build-cache/0e474de9d50cbe165ccfec1269c296a7881a1e70/output/res/layout/notification_template_media_custom.xml"
     },
     {
+        "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/layout/activity_custom_scan.xml",
+        "source": "/Users/toby/AndroidStudioProjects/BaiMap/app/src/main/res/layout/activity_custom_scan.xml"
+    },
+    {
         "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/layout/design_layout_tab_icon.xml",
         "source": "/Users/toby/.android/build-cache/e9c188727467a3fcce58c03ecca449862b0314af/output/res/layout/design_layout_tab_icon.xml"
     },
@@ -158,6 +178,14 @@
     {
         "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml",
         "source": "/Users/toby/.android/build-cache/0e474de9d50cbe165ccfec1269c296a7881a1e70/output/res/layout/abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/layout/zxing_barcode_scanner.xml",
+        "source": "/Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/res/layout/zxing_barcode_scanner.xml"
+    },
+    {
+        "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/layout/activity_select.xml",
+        "source": "/Users/toby/AndroidStudioProjects/BaiMap/app/src/main/res/layout/activity_select.xml"
     },
     {
         "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar.xml",
@@ -204,6 +232,10 @@
         "source": "/Users/toby/.android/build-cache/0e474de9d50cbe165ccfec1269c296a7881a1e70/output/res/layout/abc_action_bar_up_container.xml"
     },
     {
+        "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/layout/activity_park.xml",
+        "source": "/Users/toby/AndroidStudioProjects/BaiMap/app/src/main/res/layout/activity_park.xml"
+    },
+    {
         "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/layout/design_navigation_item_subheader.xml",
         "source": "/Users/toby/.android/build-cache/e9c188727467a3fcce58c03ecca449862b0314af/output/res/layout/design_navigation_item_subheader.xml"
     },
@@ -226,5 +258,9 @@
     {
         "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/layout/design_navigation_item_separator.xml",
         "source": "/Users/toby/.android/build-cache/e9c188727467a3fcce58c03ecca449862b0314af/output/res/layout/design_navigation_item_separator.xml"
+    },
+    {
+        "merged": "/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/res/merged/debug/layout/zxing_capture.xml",
+        "source": "/Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/res/layout/zxing_capture.xml"
     }
 ]

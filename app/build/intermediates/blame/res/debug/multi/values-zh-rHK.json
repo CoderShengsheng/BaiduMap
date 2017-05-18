@@ -400,6 +400,82 @@
                         "endOffset": 2049
                     }
                 }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 2054,
+                    "endColumn": 48,
+                    "endOffset": 2098
+                },
+                "from": {
+                    "file": "/Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/res/values-zh-rHK/values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 48,
+                        "endOffset": 99
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 2103,
+                    "endColumn": 46,
+                    "endOffset": 2145
+                },
+                "from": {
+                    "file": "/Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/res/values-zh-rHK/values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 104,
+                        "endColumn": 46,
+                        "endOffset": 146
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 2150,
+                    "endColumn": 92,
+                    "endOffset": 2238
+                },
+                "from": {
+                    "file": "/Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/res/values-zh-rHK/values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 151,
+                        "endColumn": 92,
+                        "endOffset": 239
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 2243,
+                    "endColumn": 69,
+                    "endOffset": 2308
+                },
+                "from": {
+                    "file": "/Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/res/values-zh-rHK/values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 244,
+                        "endColumn": 69,
+                        "endOffset": 309
+                    }
+                }
             }
         ]
     }

@@ -493,6 +493,27 @@
                         "endOffset": 14072
                     }
                 }
+            },
+            {
+                "to": {
+                    "startLine": 192,
+                    "startColumn": 4,
+                    "startOffset": 14077,
+                    "endLine": 193,
+                    "endColumn": 10,
+                    "endOffset": 14172
+                },
+                "from": {
+                    "file": "/Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/res/values-v11/values-v11.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endLine": 3,
+                        "endColumn": 10,
+                        "endOffset": 150
+                    }
+                }
             }
         ]
     }

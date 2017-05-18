@@ -400,6 +400,82 @@
                         "endOffset": 2250
                     }
                 }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 2255,
+                    "endColumn": 58,
+                    "endOffset": 2309
+                },
+                "from": {
+                    "file": "/Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/res/values-hu/values-hu.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 58,
+                        "endOffset": 109
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 2314,
+                    "endColumn": 46,
+                    "endOffset": 2356
+                },
+                "from": {
+                    "file": "/Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/res/values-hu/values-hu.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 114,
+                        "endColumn": 46,
+                        "endOffset": 156
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 2361,
+                    "endColumn": 125,
+                    "endOffset": 2482
+                },
+                "from": {
+                    "file": "/Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/res/values-hu/values-hu.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 161,
+                        "endColumn": 125,
+                        "endOffset": 282
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 2487,
+                    "endColumn": 115,
+                    "endOffset": 2598
+                },
+                "from": {
+                    "file": "/Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/res/values-hu/values-hu.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 287,
+                        "endColumn": 115,
+                        "endOffset": 398
+                    }
+                }
             }
         ]
     }

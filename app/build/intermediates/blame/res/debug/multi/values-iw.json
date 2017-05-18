@@ -400,6 +400,82 @@
                         "endOffset": 2130
                     }
                 }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 2135,
+                    "endColumn": 55,
+                    "endOffset": 2186
+                },
+                "from": {
+                    "file": "/Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/res/values-iw/values-iw.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 55,
+                        "endOffset": 106
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 2191,
+                    "endColumn": 49,
+                    "endOffset": 2236
+                },
+                "from": {
+                    "file": "/Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/res/values-iw/values-iw.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 111,
+                        "endColumn": 49,
+                        "endOffset": 156
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 2241,
+                    "endColumn": 134,
+                    "endOffset": 2371
+                },
+                "from": {
+                    "file": "/Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/res/values-iw/values-iw.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 161,
+                        "endColumn": 134,
+                        "endOffset": 291
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 2376,
+                    "endColumn": 89,
+                    "endOffset": 2461
+                },
+                "from": {
+                    "file": "/Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/res/values-iw/values-iw.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 296,
+                        "endColumn": 89,
+                        "endOffset": 381
+                    }
+                }
             }
         ]
     }

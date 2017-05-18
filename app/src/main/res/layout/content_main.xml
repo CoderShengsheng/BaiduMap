@@ -12,7 +12,9 @@
         android:id="@+id/bmapView"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:clickable="true" />
+        android:clickable="true"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp" />
 
     <RelativeLayout
         android:id="@+id/id_maker_ly"
@@ -70,6 +72,17 @@
                 android:layout_marginRight="20dp"
                 android:orientation="horizontal">
 
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                android:id="@+id/linearLayout2">
+
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -84,6 +97,25 @@
                     android:text="789"
                     android:textColor="#fff5eb" />
             </LinearLayout>
+
+            <Button
+                android:id="@+id/button_go"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/back"
+                android:text="出发"
+                />
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView"
+                android:layout_toRightOf="@+id/button_go"
+                android:text="评论"
+                android:id="@+id/selectCome"
+                android:background="@drawable/back"
+                />
         </RelativeLayout>
     </RelativeLayout>
 

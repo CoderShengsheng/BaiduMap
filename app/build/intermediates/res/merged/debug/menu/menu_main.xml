@@ -13,9 +13,14 @@
         android:title="我的位置"
         app:showAsAction="never" />
     <item
-        android:id="@+id/map_market"
+        android:id="@+id/car_start"
         android:orderInCategory="100"
-        android:title="添加覆盖"
+        android:title="开始停车"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/exit"
+        android:orderInCategory="100"
+        android:title="退出"
         app:showAsAction="never" />
 
 </menu>

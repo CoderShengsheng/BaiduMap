@@ -1,56 +1,69 @@
 package com.example.toby.baimap;
 
 import android.content.Context;
-import android.graphics.Color;
-import android.graphics.Point;
-import android.location.Location;
-import android.location.LocationListener;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.ContextThemeWrapper;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
+import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
 import com.baidu.location.LocationClient;
 import com.baidu.location.LocationClientOption;
-import com.baidu.mapapi.BMapManager;
 import com.baidu.mapapi.SDKInitializer;
 import com.baidu.mapapi.map.BaiduMap;
 import com.baidu.mapapi.map.BitmapDescriptor;
 import com.baidu.mapapi.map.BitmapDescriptorFactory;
-import com.baidu.mapapi.map.InfoWindow;
 import com.baidu.mapapi.map.MapPoi;
 import com.baidu.mapapi.map.MapStatusUpdate;
 import com.baidu.mapapi.map.MapStatusUpdateFactory;
 import com.baidu.mapapi.map.MapView;
 import com.baidu.mapapi.map.Marker;
 import com.baidu.mapapi.map.MarkerOptions;
-import com.baidu.mapapi.map.MyLocationConfiguration;
 import com.baidu.mapapi.map.MyLocationData;
 import com.baidu.mapapi.map.OverlayOptions;
 import com.baidu.mapapi.model.LatLng;
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
 
-import java.io.Serializable;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.File;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 //import static com.example.toby.baimap.R.id.location;
 
 public class MainActivity extends AppCompatActivity {
     MapView mMapView =null;
     BaiduMap mBaiduMap = null;
-
+    //关于交互后台的
+    //public static SelectActivity sel=
+    private int num;
+    public static Data count = null;
+    public static String npark,str="001",str3;
     //定位
     private MyLocationListener mLocationListener;
     private LocationClient mLocationClient;
@@ -61,14 +74,12 @@ public class MainActivity extends AppCompatActivity {
     //经纬度
     public  double mLatitude;
     public  double mLongtitude;
-    //方向传感器
-    //private BitmapDescriptor mIconLocation;
-    //private MyOrientationListener myOrientationListener;
-    //private float mCurrentX;
-   // private MyLocationConfiguration.LocationMode mLocationMode;
     //添加覆盖物
     private BitmapDescriptor mMarker;
     private RelativeLayout mMarkerLy;
+    //调用外部导航
+    private Button mButton,comment;
+    //扫描
 
 
     @Override
@@ -77,6 +88,9 @@ public class MainActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         SDKInitializer.initialize(getApplicationContext());
         setContentView(R.layout.activity_main);
+        //后台交互
+        //find();
+        //
         this.context=this;
         initMap();
         //definePoint();
@@ -85,7 +99,27 @@ public class MainActivity extends AppCompatActivity {
 
         initMarker();
         //添加覆盖
+        //find(str);
         addOverlays(Info.infos);
+        //导航按钮
+        mButton = (Button) findViewById(R.id.button_go);
+        mButton.setOnClickListener(new Button.OnClickListener(){//创建监听
+            public void onClick(View v) {
+                openBaiduMap(39.981567,116.431011,"我的位置","中日友好医院");
+            }
+
+        });
+        comment= (Button) findViewById(R.id.selectCome);
+        comment.setOnClickListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //SelectComment(str);
+                Intent intent =new Intent();
+                intent.setClass(MainActivity.this,SelectActivity.class);
+                intent.putExtra("str",str);
+                MainActivity.this.startActivity(intent);
+            }
+        });
 
         mBaiduMap.setOnMarkerClickListener(new BaiduMap.OnMarkerClickListener()
         {
@@ -96,44 +130,31 @@ public class MainActivity extends AppCompatActivity {
                 Info info = (Info) extraInfo.getSerializable("info");
                 ImageView iv = (ImageView) mMarkerLy
                         .findViewById(R.id.id_info_img);
-                TextView distance = (TextView) mMarkerLy
-                        .findViewById(R.id.id_info_distance);
+                //TextView distance = (TextView) mMarkerLy
+                  //      .findViewById(R.id.id_info_distance);
                 TextView name = (TextView) mMarkerLy
                         .findViewById(R.id.id_info_name);
                 TextView zan = (TextView) mMarkerLy
                         .findViewById(R.id.id_info_zan);
                 iv.setImageResource(info.getImgId());
-                distance.setText(info.getDistance());
+                //distance.setText(info.getDistance());
                 name.setText(info.getName());
-                zan.setText(info.getZan() + "");
-/*
-                InfoWindow infoWindow;
-                TextView tv = new TextView(context);
-                tv.setBackgroundResource(R.drawable.back);
-                tv.setPadding(30, 20, 30, 50);
-                tv.setText(info.getName());
-                tv.setTextColor(Color.parseColor("#ffffff"));
+                //zan.setText(info.getZan());
+                str=info.getUser();
+                //count.setC("001");
+                Log.e("parkid",str);
+                find(str);
+                //zan.setText(npark);
+                //Toast.makeText(context,"剩余车位："+info.getUser(),
+                        //location.getAddrStr(),
+                        //Toast.LENGTH_LONG).show();
 
-                final LatLng latLng = marker.getPosition();
-                Point p = mBaiduMap.getProjection().toScreenLocation(latLng);
-                p.y -= 47;
-                LatLng ll = mBaiduMap.getProjection().fromScreenLocation(p);
-
-                infoWindow = new InfoWindow(tv, ll,
-                        new InfoWindow.OnInfoWindowClickListener()
-                        {
-                            @Override
-                            public void onInfoWindowClick()
-                            {
-                                mBaiduMap.hideInfoWindow();
-                            }
-                        });
-                mBaiduMap.showInfoWindow(infoWindow);*/
                 mMarkerLy.setVisibility(View.VISIBLE);
 
                 return true;
             }
         });
+
         mBaiduMap.setOnMapClickListener(new BaiduMap.OnMapClickListener()
         {
 
@@ -218,7 +239,7 @@ public class MainActivity extends AppCompatActivity {
         //普通地图
         mBaiduMap.setMapType(BaiduMap.MAP_TYPE_NORMAL);
         //定义层级
-        msu = MapStatusUpdateFactory.zoomTo(16.0f);
+        msu = MapStatusUpdateFactory.zoomTo(17.0f);
         mBaiduMap.setMapStatus(msu);
     }
 
@@ -238,8 +259,8 @@ public class MainActivity extends AppCompatActivity {
            // MyLocationConfiguration config = new MyLocationConfiguration(mLocationMode, true, mIconLocation );
             //mBaiduMap.setMyLocationConfiguration(config);
 
-            mLatitude=39.98181;//location.getLatitude();
-            mLongtitude=116.426876;//location.getLongitude();
+            mLatitude=39.98181;;//location.getLatitude();39.98181;
+            mLongtitude=116.426876;//location.getLongitude();116.426876;
             if(isFirstIn) {
                 LatLng latlng = new LatLng(mLatitude, mLongtitude);//经纬度
                 msu = MapStatusUpdateFactory.newLatLng(latlng);
@@ -288,6 +309,42 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+//百度地图调用
+private void openBaiduMap(double lon, double lat, String title, String describle) {
+    try {
+        StringBuilder loc = new StringBuilder();
+        loc.append("intent://map/direction?origin=latlng:");
+        loc.append(lat);
+        loc.append(",");
+        loc.append(lon);
+        loc.append("|name:");
+        loc.append("我的位置");
+        loc.append("&destination=latlng:");
+        loc.append(lat);
+        loc.append(",");
+        loc.append(lon);
+        loc.append("|name:");
+        loc.append(describle);
+        loc.append("&mode=driving");
+        loc.append("&referer=Autohome|GasStation#Intent;scheme=bdapp;package=com.baidu.BaiduMap;end");
+        Intent intent = Intent.getIntent(loc.toString());
+        if (isInstallPackage("com.baidu.BaiduMap")) {
+            startActivity(intent); //启动调用
+            Log.e("GasStation", "百度地图客户端已经安装");
+        } else {
+            //Log.e("GasStation", "没有安装百度地图客户端");
+            Toast.makeText(context,"没有安装百度地图客户端",
+                    //location.getAddrStr(),
+                    Toast.LENGTH_SHORT).show();
+        }
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}
+
+    private boolean isInstallPackage(String s) {
+        return new File("/data/data/" + s).exists();
+    }
 
 
     //生命周期管理及菜单管理
@@ -354,17 +411,76 @@ public class MainActivity extends AppCompatActivity {
             case R.id.map_location:
                 centerToMyLocation();
                 break;
-            case R.id.map_market:
-                addOverlays(Info.infos);
+            case R.id.car_start:
+                //扫描二维码
+                //customScan();
+                Intent intent=new Intent();
+                intent.setClass(MainActivity.this,ParkActivity.class);
+                MainActivity.this.startActivity(intent);
                 break;
+            case  R.id.exit:
+                jumpTo(LoginActivity.class);
 
         }
 
         return super.onOptionsItemSelected(item);
     }
 
+    private void jumpTo(Class<LoginActivity> m) {
+        Intent intent =new Intent();
+        intent.setClass(MainActivity.this,m);
+        MainActivity.this.startActivity(intent);
+    }
+
+    //链接后台，获取停车位
+    private void find(final String parkid) {
+        RequestQueue requestQueue1 = Volley.newRequestQueue(MainActivity.this);
+
+        StringRequest stringRequest1 = new StringRequest(Request.Method.POST, "http://10.0.2.2/Project/ParkCount.php", listener, errorListener) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> map = new HashMap<String, String>();
+                //map.put("username","2013014110");
+                map.put("parkid", parkid);
+                return map;
+            }
+        };
+        requestQueue1.add(stringRequest1);
+        //return npark;
+
+    }
+    Response.Listener<String> listener = new Response.Listener<String>(){
+        @Override
+        public void onResponse(String s) {
+            try {
+                JSONObject jsonObject = new JSONObject(s);
+                num = jsonObject.getInt("success");
+                 str3=jsonObject.getString("success2");
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            String str = num+" ";
+            Log.e("we",str);
+            //npark=str;
+            TextView text= (TextView) findViewById(R.id.id_info_zan);
+            text.setText(str);
+            String str2="停车单价："+str3+"/h";
+            TextView text2= (TextView) findViewById(R.id.id_info_distance);
+            text2.setText(str2);
+
+            //Toast.makeText(context,"车位余量："+str,Toast.LENGTH_SHORT).show();
+            //count = (Data) getApplication();
+            //count.setD(str);
 
 
+        }
+    };
+    Response.ErrorListener errorListener = new Response.ErrorListener() {
+        @Override
+        public void onErrorResponse(VolleyError volleyError) {
+            Log.e("error", volleyError.getMessage(), volleyError);
+        }
+    };
 
 }
 

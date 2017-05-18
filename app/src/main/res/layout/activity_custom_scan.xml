@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.toby.baimap.CustomScanActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SwitchLight"
+        android:id="@+id/btn_switch"
+        android:layout_alignParentBottom="true"
+        tools:layout_editor_absoluteY="2dp"
+        tools:layout_editor_absoluteX="114dp" />
+    <!-- 我这里只是在大局下修改了一些样式，不过其实 扫描框中的 各种激光条，边框都可以改变，有兴趣的同学可以自己去搜一下 -->
+    <!-- 这个控件就是扫描的窗口了 -->
+    <com.journeyapps.barcodescanner.DecoratedBarcodeView
+        android:layout_width="368dp"
+        android:layout_height="447dp"
+        android:id="@+id/dbv_custom"
+        app:zxing_framing_rect_width="200dp"
+        app:zxing_framing_rect_height="50dp"
+
+        app:zxing_preview_scaling_strategy="fitXY"
+        app:zxing_use_texture_view="true"
+        android:layout_above="@+id/btn_switch"
+        tools:layout_editor_absoluteY="56dp"
+        tools:layout_editor_absoluteX="8dp">
+    </com.journeyapps.barcodescanner.DecoratedBarcodeView>
+</android.support.constraint.ConstraintLayout>

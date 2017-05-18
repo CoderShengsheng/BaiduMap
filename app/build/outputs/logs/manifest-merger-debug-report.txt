@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:2:1-41:12
+ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:2:1-61:12
 	package
 		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:3:5-38
 		INJECTED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml
@@ -14,49 +14,70 @@ ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest
 		INJECTED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:4:5-78
+ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:5:5-79
 	android:name
-		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:4:22-76
+		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:5:22-76
 uses-permission#android.permission.INTERNET
-ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:5:5-66
+ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:6:5-67
 	android:name
-		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:5:22-64
+		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:6:22-64
 uses-permission#com.android.launcher.permission.READ_SETTINGS
-ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:6:5-85
+ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:7:5-85
 	android:name
-		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:6:22-82
+		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:7:22-82
 uses-permission#android.permission.WAKE_LOCK
-ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:7:5-67
+ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:8:5-68
 	android:name
-		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:7:22-65
+		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:8:22-65
 uses-permission#android.permission.CHANGE_WIFI_STATE
-ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:8:5-76
-	android:name
-		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:8:22-73
-uses-permission#android.permission.ACCESS_WIFI_STATE
 ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:9:5-76
 	android:name
 		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:9:22-73
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:10:5-76
+	android:name
+		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:10:22-73
 uses-permission#android.permission.GET_TASKS
-ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:10:5-68
+ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:11:5-68
 	android:name
-		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:10:22-65
+		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:11:22-65
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:11:5-80
+ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:12:5-81
 	android:name
-		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:11:22-78
+		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:12:22-78
 uses-permission#android.permission.WRITE_SETTINGS
-ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:12:5-73
+ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:13:5-73
 	android:name
-		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:12:22-70
+		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:13:22-70
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:16:5-71
+	android:name
+		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:16:22-68
+uses-permission#android.permission.READ_PROFILE
+ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:17:5-71
+	android:name
+		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:17:22-68
+uses-permission#android.permission.READ_CONTACTS
+ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:18:5-72
+	android:name
+		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:18:22-69
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:19:5-81
+	android:name
+		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:19:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:20:5-79
+	android:name
+		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:20:22-76
 application
-ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:14:5-39:19
+ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:22:5-59:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/toby/.android/build-cache/c48711cb19dd00b6998bba6f5f804c67129f4014/output/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:design:25.3.1] /Users/toby/.android/build-cache/e9c188727467a3fcce58c03ecca449862b0314af/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/toby/.android/build-cache/0e474de9d50cbe165ccfec1269c296a7881a1e70/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/toby/.android/build-cache/e283b022847d682b46649b485fc9daa73f42316e/output/AndroidManifest.xml:26:5-20
 MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/toby/.android/build-cache/e40736e873e3feb6bf7c6a78f7bef41d453d0cf1/output/AndroidManifest.xml:26:5-20
 MERGED from [com.android.support:transition:25.3.1] /Users/toby/.android/build-cache/3bb32bf3120a9070b06885bdbaf4454c25d96ea5/output/AndroidManifest.xml:26:5-20
+MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/AndroidManifest.xml:45:5-53:19
 MERGED from [com.android.support:support-v4:25.3.1] /Users/toby/.android/build-cache/487335c9b52cd3f4296e7d6f7a797103f24d9eb4/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-fragment:25.3.1] /Users/toby/.android/build-cache/250ba4e09ea6c815b80019f193c6ec15a1b35ad1/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-media-compat:25.3.1] /Users/toby/.android/build-cache/6ab845f6c34867f16b30b262fb3ffbecad224275/output/AndroidManifest.xml:29:5-20
@@ -64,49 +85,79 @@ MERGED from [com.android.support:support-core-ui:25.3.1] /Users/toby/.android/bu
 MERGED from [com.android.support:support-core-utils:25.3.1] /Users/toby/.android/build-cache/e84c6ee62a5ecab9a09155b936bda4cae3034565/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-compat:25.3.1] /Users/toby/.android/build-cache/bb4678a367d55baa643b4e5611c6a6a30b9cf3e5/output/AndroidManifest.xml:29:5-20
 	android:label
-		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:17:9-41
+		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:26:9-41
 	android:supportsRtl
-		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:19:9-35
+		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:28:9-35
 	android:roundIcon
-		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:18:9-54
+		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:27:9-54
 	android:allowBackup
-		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:15:9-35
+		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:24:9-35
 	android:icon
-		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:16:9-43
+		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:25:9-43
 	android:theme
-		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:20:9-40
+		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:29:9-40
+	android:name
+		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:23:9-29
 service#com.baidu.location.f
-ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:21:9-25:19
+ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:30:9-33:41
 	android:enabled
-		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:23:13-35
+		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:32:13-35
 	android:process
-		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:24:13-38
+		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:33:13-38
 	android:name
-		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:22:13-48
+		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:31:13-48
 meta-data#com.baidu.lbsapi.API_KEY
-ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:26:9-28:64
+ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:35:9-37:64
 	android:value
-		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:28:13-61
+		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:37:13-61
 	android:name
-		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:27:13-52
+		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:36:13-52
 activity#com.example.toby.baimap.MainActivity
-ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:29:9-38:20
+ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:39:9-48:20
 	android:label
-		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:31:13-45
+		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:41:13-45
 	android:theme
-		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:32:13-56
+		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:42:13-56
 	android:name
-		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:30:13-41
+		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:40:13-41
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:33:13-37:29
+ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:43:13-47:29
 action#android.intent.action.MAIN
-ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:34:17-69
+ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:44:17-69
 	android:name
-		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:34:25-66
+		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:44:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:36:17-77
+ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:46:17-77
 	android:name
-		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:36:27-74
+		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:46:27-74
+activity#com.example.toby.baimap.LoginActivity
+ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:49:9-51:39
+	android:exported
+		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:51:13-36
+	android:name
+		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:50:13-42
+activity#com.example.toby.baimap.CommitActivity
+ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:52:9-54:39
+	android:exported
+		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:54:13-36
+	android:name
+		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:53:13-43
+activity#com.example.toby.baimap.ParkingState
+ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:55:9-50
+	android:name
+		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:55:19-47
+activity#com.example.toby.baimap.ParkActivity
+ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:56:9-50
+	android:name
+		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:56:19-47
+activity#com.example.toby.baimap.RegisterActivity
+ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:57:9-54
+	android:name
+		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:57:19-51
+activity#com.example.toby.baimap.SelectActivity
+ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:58:9-61
+	android:name
+		ADDED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml:58:19-49
 uses-sdk
 INJECTED from /Users/toby/AndroidStudioProjects/BaiMap/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/toby/.android/build-cache/c48711cb19dd00b6998bba6f5f804c67129f4014/output/AndroidManifest.xml:5:5-7:41
@@ -116,11 +167,13 @@ MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/toby/.a
 MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/toby/.android/build-cache/e40736e873e3feb6bf7c6a78f7bef41d453d0cf1/output/AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:recyclerview-v7:25.3.1] /Users/toby/.android/build-cache/ecf971db02c9898d93e60892459c50fecc1b89d9/output/AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:transition:25.3.1] /Users/toby/.android/build-cache/3bb32bf3120a9070b06885bdbaf4454c25d96ea5/output/AndroidManifest.xml:20:5-44
+MERGED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/AndroidManifest.xml:19:5-43
 MERGED from [com.android.support:support-v4:25.3.1] /Users/toby/.android/build-cache/487335c9b52cd3f4296e7d6f7a797103f24d9eb4/output/AndroidManifest.xml:21:5-23:54
 MERGED from [com.android.support:support-fragment:25.3.1] /Users/toby/.android/build-cache/250ba4e09ea6c815b80019f193c6ec15a1b35ad1/output/AndroidManifest.xml:21:5-23:60
 MERGED from [com.android.support:support-media-compat:25.3.1] /Users/toby/.android/build-cache/6ab845f6c34867f16b30b262fb3ffbecad224275/output/AndroidManifest.xml:21:5-23:63
 MERGED from [com.android.support:support-core-ui:25.3.1] /Users/toby/.android/build-cache/b96b89e6ca404f151bb943445c8bc6c8c06d8d39/output/AndroidManifest.xml:21:5-23:58
 MERGED from [com.android.support:support-core-utils:25.3.1] /Users/toby/.android/build-cache/e84c6ee62a5ecab9a09155b936bda4cae3034565/output/AndroidManifest.xml:21:5-23:61
+MERGED from [com.jakewharton:butterknife:8.5.1] /Users/toby/.android/build-cache/d83fe59b92e49f17e0a86acb434707eee3351705/output/AndroidManifest.xml:5:5-43
 MERGED from [com.android.support:support-compat:25.3.1] /Users/toby/.android/build-cache/bb4678a367d55baa643b4e5611c6a6a30b9cf3e5/output/AndroidManifest.xml:21:5-23:58
 	tools:overrideLibrary
 		ADDED from [com.android.support:design:25.3.1] /Users/toby/.android/build-cache/e9c188727467a3fcce58c03ecca449862b0314af/output/AndroidManifest.xml:23:9-59
@@ -147,3 +200,57 @@ MERGED from [com.android.support:support-compat:25.3.1] /Users/toby/.android/bui
 		ADDED from [com.android.support:design:25.3.1] /Users/toby/.android/build-cache/e9c188727467a3fcce58c03ecca449862b0314af/output/AndroidManifest.xml:27:9-31
 	android:name
 		ADDED from [com.android.support:design:25.3.1] /Users/toby/.android/build-cache/e9c188727467a3fcce58c03ecca449862b0314af/output/AndroidManifest.xml:26:9-47
+uses-permission#android.permission.CAMERA
+ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/AndroidManifest.xml:21:5-65
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/AndroidManifest.xml:21:22-62
+uses-feature#android.hardware.camera
+ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/AndroidManifest.xml:24:5-26:36
+	android:required
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/AndroidManifest.xml:26:9-33
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/AndroidManifest.xml:25:9-47
+uses-feature#android.hardware.camera.front
+ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/AndroidManifest.xml:27:5-29:36
+	android:required
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/AndroidManifest.xml:29:9-33
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/AndroidManifest.xml:28:9-53
+uses-feature#android.hardware.camera.autofocus
+ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/AndroidManifest.xml:32:5-34:36
+	android:required
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/AndroidManifest.xml:34:9-33
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/AndroidManifest.xml:33:9-57
+uses-feature#android.hardware.camera.flash
+ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/AndroidManifest.xml:35:5-37:36
+	android:required
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/AndroidManifest.xml:37:9-33
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/AndroidManifest.xml:36:9-53
+uses-feature#android.hardware.screen.landscape
+ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/AndroidManifest.xml:38:5-40:36
+	android:required
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/AndroidManifest.xml:40:9-33
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/AndroidManifest.xml:39:9-57
+uses-feature#android.hardware.wifi
+ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/AndroidManifest.xml:41:5-43:36
+	android:required
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/AndroidManifest.xml:43:9-33
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/AndroidManifest.xml:42:9-45
+activity#com.journeyapps.barcodescanner.CaptureActivity
+ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/AndroidManifest.xml:46:9-52:63
+	android:clearTaskOnLaunch
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/AndroidManifest.xml:48:13-45
+	android:screenOrientation
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/AndroidManifest.xml:49:13-56
+	android:stateNotNeeded
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/AndroidManifest.xml:50:13-42
+	android:windowSoftInputMode
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/AndroidManifest.xml:52:13-60
+	android:theme
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/AndroidManifest.xml:51:13-54
+	android:name
+		ADDED from [com.journeyapps:zxing-android-embedded:3.3.0] /Users/toby/.android/build-cache/18d6d62f58c3bdd6bd5ccb289ccaf8b124d75332/output/AndroidManifest.xml:47:13-74

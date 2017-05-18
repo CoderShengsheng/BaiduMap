@@ -1,4 +1,4 @@
-#Sun Apr 09 15:18:25 CST 2017
+#Wed May 17 20:24:41 CST 2017
 base.0=/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9
 renamed.0=classes.dex
 file.0=/Users/toby/AndroidStudioProjects/BaiMap/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9/classes.dex

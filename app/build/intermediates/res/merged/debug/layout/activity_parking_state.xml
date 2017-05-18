@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.toby.baimap.ParkingState">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:text="单价：8／h"
+            android:id="@+id/priceView" />
+        <TextView
+            android:id="@+id/parkShow"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/priceView"
+            android:text="停车时长："/>
+        <Chronometer
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:format="00:00:00"
+            android:gravity="center"
+            android:layout_alignTop="@+id/parkShow"
+            android:layout_toRightOf="@id/parkShow"
+            android:id="@+id/timer"/>
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:id="@+id/priceShow"
+            android:layout_below="@+id/parkShow"
+            android:text="费用："/>
+        <TextView
+            android:id="@+id/pView"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/priceShow"
+            android:layout_toRightOf="@id/priceShow"/>
+        <Button
+            android:id="@+id/parkEnd"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="结束用车"
+            android:layout_centerVertical="true"/>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:id="@+id/comment"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/parkEnd"
+            android:text="评价"/>
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
